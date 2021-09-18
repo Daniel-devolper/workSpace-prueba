@@ -2,3 +2,11 @@
 
 /dist
 /coverage
+
+/apps/ecommerce-gatsby/node_modules
+/apps/ecommerce-gatsby/public
+/apps/ecommerce-gatsby/.cache
+
+/apps/visitors-gatsby/node_modules
+/apps/visitors-gatsby/public
+/apps/visitors-gatsby/.cache
