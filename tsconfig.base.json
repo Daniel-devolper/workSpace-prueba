@@ -14,7 +14,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@example/shared/get-todos/data-acces": [
+        "libs/shared/get-todos/data-acces/src/index.ts"
+      ],
+      "@example/shared/post/ui": ["libs/shared/post/ui/src/index.ts"],
+      "@example/shared/posts/feature-shell": [
+        "libs/shared/posts/feature-shell/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

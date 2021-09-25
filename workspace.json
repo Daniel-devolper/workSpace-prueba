@@ -150,6 +150,150 @@
         }
       }
     },
+    "posts": {
+      "root": "apps/posts",
+      "sourceRoot": "apps/posts/src",
+      "projectType": "application",
+      "targets": {
+        "build": {
+          "executor": "@nrwl/web:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/posts",
+            "index": "apps/posts/src/index.html",
+            "main": "apps/posts/src/main.tsx",
+            "polyfills": "apps/posts/src/polyfills.ts",
+            "tsConfig": "apps/posts/tsconfig.app.json",
+            "assets": ["apps/posts/src/favicon.ico", "apps/posts/src/assets"],
+            "styles": ["apps/posts/src/styles.css"],
+            "scripts": [],
+            "webpackConfig": "@nrwl/react/plugins/webpack"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/posts/src/environments/environment.ts",
+                  "with": "apps/posts/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nrwl/web:dev-server",
+          "options": {
+            "buildTarget": "posts:build",
+            "hmr": true
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "posts:build:production",
+              "hmr": false
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/posts/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/posts"],
+          "options": {
+            "jestConfig": "apps/posts/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-get-todos-data-acces": {
+      "root": "libs/shared/get-todos/data-acces",
+      "sourceRoot": "libs/shared/get-todos/data-acces/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/get-todos/data-acces/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/get-todos/data-acces"],
+          "options": {
+            "jestConfig": "libs/shared/get-todos/data-acces/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-post-ui": {
+      "root": "libs/shared/post/ui",
+      "sourceRoot": "libs/shared/post/ui/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/shared/post/ui/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/post/ui"],
+          "options": {
+            "jestConfig": "libs/shared/post/ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "shared-posts-feature-shell": {
+      "root": "libs/shared/posts/feature-shell",
+      "sourceRoot": "libs/shared/posts/feature-shell/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/posts/feature-shell/**/*.{ts,tsx,js,jsx}"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/posts/feature-shell"],
+          "options": {
+            "jestConfig": "libs/shared/posts/feature-shell/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "visitors": {
       "projectType": "application",
       "root": "apps/visitors",
@@ -294,7 +438,16 @@
   "generators": {
     "@nrwl/react": {
       "application": {
+        "style": "css",
+        "linter": "eslint",
         "babel": true
+      },
+      "component": {
+        "style": "css"
+      },
+      "library": {
+        "style": "css",
+        "linter": "eslint"
       }
     },
     "@nrwl/next": {

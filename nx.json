@@ -36,6 +36,18 @@
     "ecommerce-gatsby": {
       "tags": []
     },
+    "posts": {
+      "tags": []
+    },
+    "shared-get-todos-data-acces": {
+      "tags": ["type:data-acces"]
+    },
+    "shared-post-ui": {
+      "tags": ["type:ui"]
+    },
+    "shared-posts-feature-shell": {
+      "tags": ["type:feature-shell"]
+    },
     "visitors": {
       "tags": []
     },
