@@ -33,11 +33,20 @@
     "ecomerce": {
       "tags": []
     },
-    "ecommerce-gatsby": {
-      "tags": []
-    },
     "posts": {
       "tags": []
+    },
+    "posts-data-access": {
+      "tags": ["type:data-access"]
+    },
+    "posts-feature-shell": {
+      "tags": ["type:feature-shell"]
+    },
+    "posts-ui": {
+      "tags": ["type:ui"]
+    },
+    "posts-utils": {
+      "tags": ["type:utils"]
     },
     "shared-get-todos-data-acces": {
       "tags": ["type:data-acces"]

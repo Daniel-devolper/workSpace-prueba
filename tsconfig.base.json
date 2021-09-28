@@ -15,6 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@example/posts/data-access": ["libs/posts/data-access/src/index.ts"],
+      "@example/posts/feature-shell": ["libs/posts/feature-shell/src/index.ts"],
+      "@example/posts/ui": ["libs/posts/ui/src/index.ts"],
+      "@example/posts/utils": ["libs/posts/utils/src/index.ts"],
       "@example/shared/get-todos/data-acces": [
         "libs/shared/get-todos/data-acces/src/index.ts"
       ],

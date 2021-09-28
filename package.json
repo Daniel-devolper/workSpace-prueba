@@ -20,6 +20,7 @@
     "@angular/router": "^12.2.0",
     "@nrwl/angular": "^12.9.0",
     "@nrwl/next": "^12.9.0",
+    "autoprefixer": "^10.3.6",
     "core-js": "^3.6.5",
     "gatsby": "3.10.0",
     "gatsby-image": "3.10.0",
@@ -38,6 +39,7 @@
     "react-helmet": "6.1.0",
     "regenerator-runtime": "0.13.7",
     "rxjs": "~6.6.0",
+    "tailwindcss": "^2.2.16",
     "tslib": "^2.0.0",
     "webpack": "^5.39.1",
     "zone.js": "~0.11.4"
