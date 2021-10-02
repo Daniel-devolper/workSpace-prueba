@@ -179,6 +179,33 @@
         }
       }
     },
+    "posts-e2e": {
+      "root": "apps/posts-e2e",
+      "sourceRoot": "apps/posts-e2e/src",
+      "projectType": "application",
+      "targets": {
+        "e2e": {
+          "executor": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/posts-e2e/cypress.json",
+            "devServerTarget": "posts:serve",
+            "tsConfig": "apps/posts-e2e/tsconfig.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ecomerce:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["apps/posts-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "posts-feature-shell": {
       "root": "libs/posts/feature-shell",
       "sourceRoot": "libs/posts/feature-shell/src",

@@ -39,6 +39,10 @@
     "posts-data-access": {
       "tags": ["type:data-access"]
     },
+    "posts-e2e": {
+      "tags": [],
+      "implicitDependencies": ["ecomerce"]
+    },
     "posts-feature-shell": {
       "tags": ["type:feature-shell"]
     },
